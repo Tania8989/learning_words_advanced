@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Лабораторна робота 12</title>
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="favicon.png">
+</head>
+<body>
+<div class="container">
+<h1>Вивчення слів</h1>
+<div class="level-select">
+<label for="difficulty-level">Рівень складності:</label>
+<select id="difficulty-level">
+<option value="easy">Початковий</option>
+<option value="medium" selected>Середній</option>
+<option value="hard">Складний</option>
+</select>
+</div>
+<div class="stats-container">
+<p>Крок: <span id="current-step">0</span> / <span id="total-steps">0</span></p>
+<p>Вірно: <span id="correct-count" class="correct">0</span></p>
+<p>Невірно: <span id="incorrect-count" class="incorrect">0</span></p>
+</div>
+<div id="word-card" class="card">
+<p class="word-text">Натисніть "Почати" для старту</p>
+<input type="text" id="translation-input" placeholder="Введіть переклад" disabled>
+<button id="check-button" disabled>Перевірити</button>
+</div>
+<button id="start-button">Почати</button>
+</div>
+<div id="result-modal" class="modal">
+<div class="modal-content">
+<span class="close-button">&times;</span>
+<h2>Ваш Рівень Знань</h2>
+<p id="modal-message"></p>
+<p>Загальна кількість слів: <span id="modal-total"></span></p>
+<p>Вірно перекладено: <span id="modal-correct"></span></p>
+</div></div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
